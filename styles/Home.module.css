@@ -1,11 +1,21 @@
 .container {
-  min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: white;
+  position: relative;
+}
+
+.menuItems {
+  margin-top: 34px;
+  display: inline-block;
+  color: blue;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .main {
@@ -60,6 +70,17 @@
   font-size: 1.5rem;
 }
 
+.aboutDescription {
+  font-size: 22px;
+  margin-bottom: 20px;
+  padding: 0px 20px 0px 20px;
+  text-align: center;
+}
+
+.aboutDescription a {
+  color: blue;
+}
+
 .code {
   background: #fafafa;
   border-radius: 5px;
@@ -109,8 +130,9 @@
 }
 
 .logo {
-  height: 1em;
-  margin-left: 0.5rem;
+  position: absolute;
+  top: -160px;
+  right: -12px;
 }
 
 @media (max-width: 600px) {

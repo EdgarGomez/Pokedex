@@ -13,18 +13,14 @@ export default function Home() {
 
   return (
     <>
-      <div className={styles.container}>
+      <div className={styles.container} style={{minHeight: '100vh'}}>
         <div style={{marginBottom: '50px', display: 'flex', justifyItems: 'flex-start', justifyContent: 'flex-start'}}>
         <h1>
           Pokedex
         </h1>
         <div> 
-          <Link href="/search">
-            <a className={styles.menuItems}>Search</a>
-          </Link>
-
-          <Link href="/about">
-            <a className={styles.menuItems}>What is this</a>
+          <Link href="/">
+            <a className={styles.menuItems}>Go back</a>
           </Link>
         </div>
         <span className={styles.logo}>
@@ -32,16 +28,13 @@ export default function Home() {
         </span>
         </div>
 
-        <InfiniteScroll
-          pageStart={1}
-          loadMore={loadPokemons}
-          hasMore={true}
-          loader={<div className="loader">Loading ...</div>}
-          threshold={250}
-          style={{width: '100%', display: 'flex', flexWrap: 'wrap'}}
-        >
-        {simplePokemonList.map(pokemon => <PokemonCard key={pokemon.id} pokemon={pokemon} />)}
-      </InfiniteScroll>
+        <div className={styles.aboutDescription}>
+        This is a hobby project made by Edgar (<Link href="https://edgargomez.es">edgargomez.es</Link>) using Nextjs (Reactjs), Typescript, PokeAPI, a bit of CSS and some fun. There is also a mobile version made in React Native.
+        </div>
+
+        <div className={styles.aboutDescription}>
+        You can check both repositories here: <Link href="https://github.com/EdgarGomez/Pokedex-React-Native">React Native Pokedex</Link> and <Link href="https://github.com/EdgarGomez/Pokedex">Nextjs Pokedex</Link>
+        </div>
  
       </div>
  
